@@ -26,8 +26,8 @@ class GitupOpenCommand(sublime_plugin.WindowCommand):
         if os.path.isfile(path):
             path = os.path.dirname(path)
 
-        app_path = '/Applications/GitUp.app'
-        subprocess.call(['open', '-a', app_path, path])
+        app_path = '/Applications/GitUp.app/Contents/SharedSupport/gitup'
+        subprocess.call([app_path])
 
 
 class SideBarGitupCommand(sublime_plugin.WindowCommand):
